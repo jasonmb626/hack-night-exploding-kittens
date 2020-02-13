@@ -56,7 +56,12 @@ class Deck
             card = ExplodingKitten.new
             @deck.append(card)
         end
-        for i in 1..6
+        if @num_players == 2
+            num_defuse = 2
+        else 
+            num_defuse = 6-@num_players
+        end 
+        for i in 1..num_defuse
             card = Defuse.new
             @deck.append(card)
         end
@@ -87,7 +92,7 @@ class Deck
 end
 
 #example use
-# d = Deck.new(3)
+# d = Deck.new(4)
 # (Distrubute cards to player here)
 # d.add_exploding_defuse_cards
 # d.shuffle
