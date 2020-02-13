@@ -60,6 +60,7 @@ class Deck
             card = Defuse.new
             @deck.append(card)
         end
+        @deck.shuffle
     end
 
     def draw_card
@@ -67,9 +68,9 @@ class Deck
     end
 
     def shuffle
-        for i in 1..@deck.length
+        for i in 0..@deck.length()-1
             # Random for remaining positions. 
-            r = i + (rand(@deck.length -i)); 
+            r = i + (rand(@deck.length() -i)); 
             temp = @deck[i]
             @deck[i] = @deck[r]
             @deck[r] = temp
@@ -77,15 +78,20 @@ class Deck
     end
 
     def print_deck 
+        i = 0
         @deck.each do |card|
-            puts card.name
+            puts "#{i}: #{card.name}"
+            i = i + 1
         end
     end
 end
 
-#Initializes the deck and shuffles, minus the exploding & defuse cards
-d = Deck.new(4)
-d.add_exploding_defuse_cards()
-d.shuffle()
-
-
+#example use
+# d = Deck.new(3)
+# (Distrubute cards to player here)
+# d.add_exploding_defuse_cards
+# d.shuffle
+# d.print_deck
+# card = d.draw_card
+# puts card.name
+# d.print_deck
