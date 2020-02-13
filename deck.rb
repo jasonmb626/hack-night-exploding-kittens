@@ -48,7 +48,7 @@ class Deck
             card = TacoCat.new
             @deck.append(card)
         end
-        @deck.shuffle
+        self.shuffle
     end
     
     def add_exploding_defuse_cards
@@ -65,7 +65,7 @@ class Deck
             card = Defuse.new
             @deck.append(card)
         end
-        @deck.shuffle
+        self.shuffle
     end
 
     def draw_card

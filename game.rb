@@ -9,6 +9,7 @@ class Game
             @players.append(Player.new(name))
         end
         @drawPile = Deck.new(playerNames.length())
+        @drawPile.print_deck
         for i in 1..4
             for player in @players
                 newCard = @drawPile.draw_card
