@@ -1,5 +1,5 @@
 class Card 
-    def initalize(initName, initDescription)
+    def initialize(initName, initDescription)
         @name = initName
         @description = initDescription
     end
@@ -13,7 +13,7 @@ class Card
 end
 
 class ExplodingKitten < Card
-    def initalize
+    def initialize
         super("Exploding Kitten","Eliminates the player that draws it, putting them permanently out of the game. The last player remaining wins the game.")
     end
 
@@ -28,89 +28,83 @@ class ExplodingKitten < Card
     end
 end
 
-# class Defuse < Card
-#     def initalize
-#         super("Defuse","Allows a player that draws an Exploding Kitten card to put the card back in the deck in whatever location they choose. This location may be kept secret from other players.")
-#     end
-# end
+class Defuse < Card
+    def initialize
+        super("Defuse","Allows a player that draws an Exploding Kitten card to put the card back in the deck in whatever location they choose. This location may be kept secret from other players.")
+    end
+end
 
-# class Nope < Card
-#     def initalize
-#         super("Nope","")
-#     end
-# end
+class Nope < Card
+    def initialize
+        super("Nope","")
+    end
+end
 
-# class Attack < Card
-#     def initalize
-#         super("Attack","")
-#     end
-# end
+class Attack < Card
+    def initialize
+        super("Attack","")
+    end
+end
 
-# class Skip < Card
-#     def initalize
-#         super("Skip","")
-#     end
-# end
+class Skip < Card
+    def initialize
+        super("Skip","")
+    end
+end
 
-# class Favor < Card
-#     def initalize
-#         super("Favor","")
-#     end
-# end
+class Favor < Card
+    def initialize
+        super("Favor","")
+    end
+end
 
-# class Shuffle < Card
-#     def initalize
-#         super("Shuffle","")
-#     end
-# end
+class Shuffle < Card
+    def initialize
+        super("Shuffle","")
+    end
+end
 
-# class SeeTheFuture < Card
-#     def initalize
-#         super("SeeTheFuture","")
-#     end
-# end
+class SeeTheFuture < Card
+    def initialize
+        super("SeeTheFuture","")
+    end
+end
 
-# class ComboCatCards < Card
-#     def initalize(name, description)
-#         super(name, description)
-#     end
-# end
+class ComboCatCards < Card
+    def initialize(name, description)
+        super(name, description)
+    end
+end
 
-# class TacoCat < ComboCatCards
-#     def initalize
-#         super("TacoCat", "")
-#     end
-# end
+class TacoCat < ComboCatCards
+    def initialize
+        super("TacoCat", "")
+    end
+end
 
-# class Cattermelon < ComboCatCards
-#     def initalize
-#         super("Cattermelon", "")
-#     end
-# end
+class Cattermelon < ComboCatCards
+    def initialize
+        super("Cattermelon", "")
+    end
+end
 
-# class RainbowRalphingCat < ComboCatCards
-#     def initalize
-#         super("RainbowRalphingCat", "")
-#     end
-# end
+class RainbowRalphingCat < ComboCatCards
+    def initialize
+        super("RainbowRalphingCat", "")
+    end
+end
 
-# class BeardCat < ComboCatCards
-#     def initalize
-#         super("BeardCat", "")
-#     end
-# end
+class BeardCat < ComboCatCards
+    def initialize
+        super("BeardCat", "")
+    end
+end
 
-# class HairyPotatoCat < ComboCatCards
-#     def initalize
-#         super("HairyPotatoCat", "")
-#     end
-# end
+class HairyPotatoCat < ComboCatCards
+    def initialize
+        super("HairyPotatoCat", "")
+    end
+end
 
-c = ExplodingKitten.new
 
-puts "#{c.name} #{c.description}"
-c.print
 
-nc = Card.new("Card", "basicCard")
-puts "#{nc.name} #{nc.description}"
-nc.print
