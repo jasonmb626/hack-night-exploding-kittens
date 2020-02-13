@@ -33,4 +33,12 @@ class Player
             end
         end
     end
+
+    def printHand
+        print "Hand: "
+        for card in @cards
+            print "#{card.name} "
+        end
+        print "\n"
+    end
 end

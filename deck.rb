@@ -75,7 +75,7 @@ class Deck
     def shuffle
         for i in 0..@deck.length()-1
             # Random for remaining positions. 
-            r = i + (rand(@deck.length() -i)); 
+            r = rand(@deck.length()); 
             temp = @deck[i]
             @deck[i] = @deck[r]
             @deck[r] = temp

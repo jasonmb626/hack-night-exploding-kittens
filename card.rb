@@ -25,6 +25,7 @@ class ExplodingKitten < Card
             player.explode
             puts "Exploding Kitten was drawn and you have no Defuse. You Exploded. Better luck next time."
         end
+        
     end
 end
 
