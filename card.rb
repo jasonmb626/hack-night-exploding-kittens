@@ -13,7 +13,7 @@ class Card
 end
 
 class ExplodingKitten < Card
-    def initalize
+    def initialize
         super("Exploding Kitten","Eliminates the player that draws it, putting them permanently out of the game. The last player remaining wins the game.")
     end
 
