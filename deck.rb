@@ -1,65 +1,63 @@
-require 'cards.py'
+require './card.rb'
 
 class Deck
-    @deck = []
-    
     def initialize(num_players)
+        @deck = []
         @num_players = num_players
         for i in 1..5
-            card = NopeCard.new
+            card = Nope.new
             @deck.append(card)
         end
         for i in 1..4
-            card = AttackCard.new
+            card = Attack.new
             @deck.append(card)
         end
         for i in 1..4
-            card = SkipCard.new 
+            card = Skip.new 
             @deck.append(card)
         end
         for i in 1..5
-            card = FavorCard.new
+            card = Favor.new
             @deck.append(card)
         end
         for i in 1..4
-            card = ShuffleCard.new
+            card = Shuffle.new
             @deck.append(card)
         end
         for i in 1..5
-            card = SeeTheFutureCard.new
+            card = SeeTheFuture.new
             @deck.append(card)
         end
         for i in 1..4
-            card = CattermelonCatCard.new
+            card = Cattermelon.new
             @deck.append(card)
         end
         for i in 1..4
-            card = RainbowRalphingCatCard.new
+            card = RainbowRalphingCat.new
             @deck.append(card)
         end
         for i in 1..4
-            card = BeardCatCard.new
+            card = BeardCat.new
             @deck.append(card)
         end
         for i in 1..4
-            card = HairyPotatoCatCard.new
+            card = HairyPotatoCat.new
             @deck.append(card)
         end
         for i in 1..4
-            card = TacoCatCard.new
+            card = TacoCat.new
             @deck.append(card)
         end
-        deck.shuffle
-        
+        @deck.shuffle
     end
     
     def add_exploding_defuse_cards
         for i in 1..(@num_players - 1)
-            card = ExplodingKittenCard.new
+            card = ExplodingKitten.new
             @deck.append(card)
         end
         for i in 1..6
-            card = DefuseCard.new
+            card = Defuse.new
             @deck.append(card)
         end
     end
@@ -69,7 +67,7 @@ class Deck
     end
 
     def shuffle
-        for i in 1..deck.length 
+        for i in 1..@deck.length
             # Random for remaining positions. 
             r = i + (rand(@deck.length -i)); 
             temp = @deck[i]
@@ -86,8 +84,8 @@ class Deck
 end
 
 #Initializes the deck and shuffles, minus the exploding & defuse cards
-# deck = Deck.new(4)
-# deck.add_exploding_defuse_cards()
-# deck.shuffle()
+d = Deck.new(4)
+d.add_exploding_defuse_cards()
+d.shuffle()
 
 
